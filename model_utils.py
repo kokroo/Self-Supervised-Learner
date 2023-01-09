@@ -12,7 +12,7 @@ def load_model(args):
     if '.ckpt' in encoder_name:
         if technique.lower() == 'simclr':
             model = SIMCLR.load_from_checkpoint(encoder_name, **args.__dict__)
-        elif technique.lower() == 'simsiam:
+        elif technique.lower() == 'simsiam':
             model = SIMSIAM.load_from_checkpoint(encoder_name, **args.__dict__)
         elif technique.lower() == 'classifier':
             model = classifier.load_from_checkpoint(encoder_name, **args.__dict__)
